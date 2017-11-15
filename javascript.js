@@ -1,32 +1,50 @@
 /**
  * Created by sherryuan on 2017-11-09.
  */
+
 $(function () {
-    var approved = false;
+
+    /* Notification from the front page */
+    var approved_key = "approved";
+    if (localStorage.getItem(approved_key) == undefined) {
+        localStorage.setItem(approved_key, false);
+    }
 
     $("#notification_button").click(function() {
-        if (!approved) {
+        if (localStorage.getItem(approved_key) == "false") {
+            // if user hasn't been approved yet, show the page with the first "Become a Super Reviewer notification"
             window.open("profile_with_notification.html", "_self");
-            approved = true;
         } else {
+            // if user's already approved, we know to show the notification telling them they're approved
             window.open("profile_with_approval.html", "_self");
         }
     });
 
-// When the user clicks on the button, open the modal
-    $("#become_super_reviewer_button").onclick = function() {
-        $("#super_reviewer_info").style.display = "block";
-    };
+    /* Modal box for becoming a Super Reviewer */
 
-// When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        $("#super_reviewer_info").style.display = "none";
-    };
+    // When the user clicks on the button, open the modal
+    $("#become_super_reviewer_button").click(function() {
+        $("#super_reviewer_info")[0].style.display = "block";
+    });
 
-// When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == $("#super_reviewer_info")) {
-            $("#super_reviewer_info").style.display = "none";
-        }
-    };
+    // When the user clicks on <span> (x), close the modal
+    $(".close").click(function() {
+        $("#super_reviewer_info")[0].style.display = "none";
+    });
+
+    // When user clicks on continue, close the modal and open the Google Form
+    $("#continue_button").click(function() {
+        $("#super_reviewer_info")[0].style.display = "none";
+        localStorage.setItem(approved_key, true);
+    });
+
+    // When user clicks on cancel, close the modal
+    $("#cancel_button").click(function() {
+        $("#super_reviewer_info")[0].style.display = "none";
+    });
+
+    /* home page button */
+    $(".home_page").click(function() {
+        window.open("index.html", "_self");
+    });
 });

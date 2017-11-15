@@ -1,21 +1,38 @@
 .full_screen {
     max-height: 100%;
     max-width: 100%;
-}
-
-#front_page {
     position: relative;
     display: inline-block;
 }
 
 #notification_button {
     position: absolute;
+    width: 5%;
+    height: 5%;
     top: 4%;
     right: 21%;
     opacity: 0;
 }
 
-#notification_button:hover {
+#become_super_reviewer_button {
+    position: absolute;
+    width: 30%;
+    height: 7%;
+    top: 48%;
+    left: 35%;
+    opacity: 0;
+}
+
+.home_page {
+    position: absolute;
+    width: 10%;
+    height: 5%;
+    top: 2%;
+    left: 15%;
+    opacity: 0;
+}
+
+#notification_button:hover, #become_super_reviewer_button:hover, .home_page:hover {
     cursor: pointer;
 }
 
@@ -33,13 +50,31 @@
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
+/* Modal Content Box */
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 60%; /* Could be more or less, depending on screen size */
+}
+
+/* Modal content  styling */
+.modal-content h1 {
+    font-size: 40px;
+    color: #d32323;
+    font-family: "Helvetica Neue", "sans-serif";
+    text-align: center;
+}
+
+.modal-content h3 {
+    font-size: 32px;
+    font-family: "Helvetica Neue", "sans-serif";
+}
+
+.modal-content p {
+    font-size: 24px;
+    font-family: "Arial", "sans-serif";
 }
 
 /* The Close Button */
