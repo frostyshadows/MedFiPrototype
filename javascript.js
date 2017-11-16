@@ -20,6 +20,12 @@ $(function () {
         }
     });
 
+    /* Search from front page */
+
+    $("#search_button").click(function () {
+        window.open("Interface1/ResultPage.html", "_self");
+    });
+
     /* Modal box for becoming a Super Reviewer */
 
     // When the user clicks on the button, open the modal

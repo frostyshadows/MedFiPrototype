@@ -14,6 +14,14 @@
     opacity: 0;
 }
 
+#search_button {
+    position: absolute;
+    width: 4%;
+    height: 5%;
+    top: 39%;
+    right: 17%;
+    opacity: 0;
+}
 #become_super_reviewer_button {
     position: absolute;
     width: 30%;
