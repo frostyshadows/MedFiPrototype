@@ -53,4 +53,14 @@ $(function () {
     $(".home_page").click(function() {
         window.open("index.html", "_self");
     });
+
+    $("#profile_button")
+        .mouseenter(function () {
+        console.log("entered profile button");
+        $("#profile_hover")[0].style.opacity = "1";
+    })
+        .mouseleave(function () {
+        console.log("left profile button");
+        $("#profile_hover")[0].style.opacity = "0";
+    });
 });
