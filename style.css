@@ -40,7 +40,7 @@
     opacity: 0;
 }
 
-#notification_button:hover, #become_super_reviewer_button:hover, .home_page:hover {
+#notification_button:hover, #become_super_reviewer_button:hover, #search_button:hover, .home_page:hover {
     cursor: pointer;
 }
 
