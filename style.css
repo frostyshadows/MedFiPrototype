@@ -40,7 +40,8 @@
     opacity: 0;
 }
 
-#notification_button:hover, #become_super_reviewer_button:hover, #search_button:hover, .home_page:hover {
+#notification_button:hover, #become_super_reviewer_button:hover, #search_button:hover, .home_page:hover,
+#cancel_button:hover, #continue_button:hover {
     cursor: pointer;
 }
 
@@ -98,4 +99,20 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* The buttons in the modal */
+
+#cancel_button {
+    font-size: 24px;
+    font-family: "Helvetica Neue", "sans-serif";
+    color: whitesmoke;
+    background-color: #d32323;
+}
+
+#continue_button {
+    font-size: 24px;
+    font-family: "Helvetica Neue", "sans-serif";
+    color: whitesmoke;
+    background-color: #d32323;
 }
