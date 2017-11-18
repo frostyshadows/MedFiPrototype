@@ -13,6 +13,15 @@ body {
   margin: 0;
 }
 
+.home_page {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  top: 1%;
+  left: 15%;
+  opacity: 0;
+}
+
 .full_screen {
   max-height: 100%;
   max-width: 100%;

@@ -51,7 +51,11 @@ $(function () {
 
     /* home page button */
     $(".home_page").click(function() {
-        window.open("index.html", "_self");
+        if (window.location.pathname.indexOf("Interface1") == -1) {
+            window.open("index.html", "_self");
+        } else {
+            window.open("../index.html", "_self");
+        }
     });
 
     $("#profile_button")
