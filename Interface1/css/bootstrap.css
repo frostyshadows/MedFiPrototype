@@ -29,7 +29,7 @@ body {
     height: 3%;
     top: 10%;
     right: 20%;
-    opacity: 0;
+    opacity: 1;
 }
 
 .vote_button2 {
@@ -38,7 +38,7 @@ body {
     height: 3%;
     top: 10%;
     right: 26%;
-    opacity: 0;
+    opacity: 1;
 
 }
 
