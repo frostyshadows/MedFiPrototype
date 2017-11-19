@@ -10,7 +10,7 @@ $(function () {
         localStorage.setItem(approved_key, false);
     }
 
-    $("#notification_button").click(function() {
+    $("#notification_button").click(function () {
         if (localStorage.getItem(approved_key) == "false") {
             // if user hasn't been approved yet, show the page with the first "Become a Super Reviewer notification"
             window.open("profile_with_notification.html", "_self");
@@ -29,108 +29,106 @@ $(function () {
     /* Modal box for becoming a Super Reviewer */
 
     // When the user clicks on the button, open the modal
-    $("#become_super_reviewer_button").click(function() {
+    $("#become_super_reviewer_button").click(function () {
         $("#super_reviewer_info")[0].style.display = "block";
     });
 
     // When the user clicks on <span> (x), close the modal
-    $(".close").click(function() {
+    $(".close").click(function () {
         $("#super_reviewer_info")[0].style.display = "none";
     });
 
     // When user clicks on continue, close the modal and open the Google Form
-    $("#continue_button").click(function() {
+    $("#continue_button").click(function () {
         $("#super_reviewer_info")[0].style.display = "none";
         localStorage.setItem(approved_key, true);
     });
 
     // When user clicks on cancel, close the modal
-    $("#cancel_button").click(function() {
+    $("#cancel_button").click(function () {
         $("#super_reviewer_info")[0].style.display = "none";
     });
-	
-	$("#cancel_button1").click(function() {
-    $("#myModal1")[0].style.display = "none";
+
+    $("#cancel_button1").click(function () {
+        $("#myModal1")[0].style.display = "none";
     });
-	$("#cancel_button2").click(function() {
-    $("#myModal")[0].style.display = "none";
+    $("#cancel_button2").click(function () {
+        $("#myModal")[0].style.display = "none";
     });
-	
-	$("#submit_button").click(function() {
-    $("#myModal")[0].style.display = "none";
+
+    $("#submit_button").click(function () {
+        $("#myModal")[0].style.display = "none";
     });
 
 
     /* home page button */
-    $(".home_page").click(function() {
+    $(".home_page").click(function () {
         if (window.location.pathname.indexOf("Interface1") == -1) {
             window.open("index.html", "_self");
         } else {
             window.open("../index.html", "_self");
         }
     });
-	
-var modal = document.getElementById('myModal');
+
+    var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+    var btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
-}
-
-var modal1 = document.getElementById('myModal1');
-
-// Get the button that opens the modal
-var btn1 = document.getElementById("myBtn1");
-
-	var span1 = document.getElementsByClassName("close1")[0];
-// Get the <span> element that closes the modal
-
-
-// When the user clicks on the button, open the modal 
-btn1.onclick = function() {
-    modal1.style.display = "block";
-}
-
-span1.onclick = function() {
-    modal1.style.display = "none";
-}
-// When the user clicks on <span> (x), close the modal
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target === modal1) {
-        modal1.style.display = "none";
-    }
-}
-
-
+    var span = document.getElementsByClassName("close")[0];
 
     $("#profile_button")
         .mouseenter(function () {
-        $("#profile_hover")[0].style.opacity = "1";
-    })
+            $("#profile_hover")[0].style.opacity = "1";
+        })
         .mouseleave(function () {
-        $("#profile_hover")[0].style.opacity = "0";
-    })
+            $("#profile_hover")[0].style.opacity = "0";
+        })
         .click(function () {
             window.open("ReviewerDetails.html", "_self");
         });
+
+// When the user clicks on the button, open the modal 
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+// When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+// When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    var modal1 = document.getElementById('myModal1');
+
+// Get the button that opens the modal
+    var btn1 = document.getElementById("myBtn1");
+
+    var span1 = document.getElementsByClassName("close1")[0];
+// Get the <span> element that closes the modal
+
+
+// When the user clicks on the button, open the modal 
+    btn1.onclick = function () {
+        modal1.style.display = "block";
+    }
+
+    span1.onclick = function () {
+        modal1.style.display = "none";
+    }
+// When the user clicks on <span> (x), close the modal
+
+// When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target === modal1) {
+            modal1.style.display = "none";
+        }
+    }
 });
