@@ -13,6 +13,15 @@ body {
   margin: 0;
 }
 
+.home_page {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  top: 1%;
+  left: 15%;
+  opacity: 0;
+}
+
 .full_screen {
   max-height: 100%;
   max-width: 100%;
@@ -31,9 +40,9 @@ body {
 
 #profile_hover {
   position: absolute;
-  width: 200px;
-  height: 300px;
-  top: 30%;
+  width: 270px;
+  height: 400px;
+  top: 28%;
   left: 19%;
   opacity: 0;
 }
