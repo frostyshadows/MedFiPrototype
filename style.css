@@ -14,6 +14,17 @@
     opacity: 0;
 }
 
+#vote_button {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    top: 10%;
+    right: 5%;
+    opacity: 100;
+}
+
+
+
 #search_button {
     position: absolute;
     width: 5%;
